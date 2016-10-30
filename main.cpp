@@ -66,7 +66,7 @@ namespace approxTreeMetric {
         double radius = beta * pow(2, delta-depth-2)*mini;
         int cost = pow(2, delta-depth)*mini;
         for (int el : vs) {
-            int now = cur[el];
+            int& now = cur[el];
             while (now < N) {
                 if (dist[el][perm[now]] <= radius) break;
                 ++now;
